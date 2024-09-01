@@ -105,7 +105,6 @@ if (
 } else {
   setupButton.click();
 }
-
 function loadData() {
   let calculationMethod = localStorage.getItem("calculationMethod");
   let country = localStorage.getItem("country");
