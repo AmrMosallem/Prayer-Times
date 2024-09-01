@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Quran"; /* Name your font family */
+  src: url("UthmanicHafs1 Ver13.otf"); /* Locate the .ttf file within your directory*/
+}
+
+body {
+  background-color: rgb(31, 32, 47);
+  color: white;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+  gap:20px;
+}
+#prayerTimes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  align-items: center;
+  gap: 30px;
+  font-size: 20px;
+  /* padding-bottom: 100px; */
+  width:100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+#prayerTimes > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.prayer {
+  font-size: 28px;
+  font-weight: 600;
+  color:rgb(210, 214, 255);
+  }
+.prayer-time {
+  font-size: 28px;
+  font-weight: 600;   color:rgb(235, 237, 255);
+}
+.prayer-time small{
+  font-size: 14px;
+  font-weight: 400;
+}
+#info-container {
+  width: 250px;
+  font-size: 24px;
+  /* margin-bottom: 40px; */
+}
+#date {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color:rgb(210, 214, 255);
+
+}
+#city {
+  text-align: left;
+  font-size: 58px;
+  font-weight: 600;
+}
+#time {
+  display: grid;
+  font-size: 42px;
+  font-weight: 600;
+  grid-template-columns: 55px 14px 55px 15px 55px 20px;
+  align-items: end;
+}
+#time>* {
+text-align: center;
+}
+
+#apm {
+  font-size: 24px;
+  font-weight: 600;
+}
+#remaining{
+  width: 250px;
+  text-align: right;
+  font-size: 16px;    color:rgb(210, 214, 255);
+  display: grid;
+  grid-template-columns: 35px 80px 130px;
+}
+#remaining span{
+  font-size: 18px;
+  font-weight: 600;
+}
+#settings {
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: white;
+  transition: 0.5s;
+}
+#settings:hover {
+  transform: rotateZ(-90deg);
+}
+
+#setup-container {
+  height: 100dvh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(21, 21, 31, 0.84);
+}
+#setup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  border: 2px solid white;
+  padding: 20px;
+  background-color: rgba(21, 21, 31, 0.84);
+  border-radius: 8px;
+}
+#setup > :not(button) {
+  width: 100%;
+}
+select {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 600;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#save {
+  border: none;
+  cursor: pointer;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 600;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 24px;
+  background-color: #ffffff;
+  transition: 0.2s;
+}
+#save:hover {
+  background: none;
+  color: white;
+}
+.ayah {
+  font-family: "Quran";
+  font-size: 28px;
+}

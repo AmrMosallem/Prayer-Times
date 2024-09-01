@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Times</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section id="setup-container">
+        <div id="setup">
+            <span style="font-size: 22px">قال الله تعالى:</span>
+            <span class="ayah">إِنَّ ٱلصَّلَوٰةَ كَانَتۡ عَلَى ٱلۡمُؤۡمِنِينَ كِتَٰبٗا مَّوۡقُوتٗا ١٠٣</span>
+            <p style="font-size: 20px; font-weight: bold; text-align: center; margin-bottom: 5px;">من فضلك اختر
+                الاعدادات الخاصة بك</p>
+
+
+            <label for="countries">الدولة:</label>
+            <select name="countries" id="countries"></select>
+
+            <label for="cities">المدينة:</label>
+            <select name="cities" id="cities"></select>
+            <label for="calculationMethods">طريقة الحساب:</label>
+            <select name="calculationMethods" id="calculationMethods"></select>
+            <button id="save">حفظ</button>
+        </div>
+    </section>
+    <section id="info-container">
+        <div id="city"></div>
+        <div id="date">
+            <span id="weekday"></span>
+            <span id="day"></span>
+            <span id="month"></span>
+            <span id="year"></span>
+
+        </div>
+        <div id="time">
+            <span id="seconds"></span>:
+            <span id="minutes"></span>:
+            <span id="hours"></span>
+            <span id="apm"></span>
+        </div>
+    </section>
+    <section id="prayerTimes">
+        <div>
+            <span class="prayer">الفجر</span>
+            <span class="prayer-time" id="fajr"><small>جاري التحميل</small></span>
+        </div>
+        <div>
+            <span class="prayer">الشروق</span>
+            <span class="prayer-time" id="shrouq"><small>جاري التحميل</small></span>
+        </div>
+        <div>
+            <span class="prayer">الظهر</span>
+            <span class="prayer-time" id="dhuhr"><small>جاري التحميل</small></span>
+        </div>
+        <div>
+            <span class="prayer">العصر</span>
+            <span class="prayer-time" id="asr"><small>جاري التحميل</small></span>
+        </div>
+        <div>
+            <span class="prayer">المغرب</span>
+            <span class="prayer-time" id="maghrib"><small>جاري التحميل</small></span>
+        </div>
+        <div>
+            <span class="prayer">العشاء</span>
+            <span class="prayer-time" id="isha"><small>جاري التحميل</small></span>
+        </div>
+    </section>
+    <section id="remaining">
+        جاري التحميل...
+    </section>
+    <!-- <div class="remaining-container">
+        <bdi>المتبقي: <bdi id="remaining-time">24 دقيقة</bdi>
+
+        <bdi style="display: block;"> على أذان <bdi id="remaining-azan">المغرب</bdi>
+        </bdi>
+    </div> -->
+    <i class="fa-solid fa-gear" id="settings"></i>
+</body>
+<script src="script.js"></script>
+
+</html>
