@@ -2,7 +2,7 @@ function setUp() {
   let setupContainer = document.getElementById("setup-container");
   setupContainer.style.display = "flex";
   let calculationMethods = [];
-  fetch("http://api.aladhan.com/v1/methods")
+  fetch("https://api.aladhan.com/v1/methods")
     .then((response) => response.json())
     .then((data) => {
       data = data.data;
@@ -110,7 +110,7 @@ function loadData() {
   let calculationMethod = localStorage.getItem("calculationMethod");
   let country = localStorage.getItem("country");
   let city = localStorage.getItem("city");
-  let url = `http://api.aladhan.com/v1/timingsByCity?city=${city}&country=${country}&method=${calculationMethod}`;
+  let url = `https://api.aladhan.com/v1/timingsByCity?city=${city}&country=${country}&method=${calculationMethod}`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
